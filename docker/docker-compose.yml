@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0 # Especifique a versão desejada aqui
+    environment:
+      - discovery.type=single-node # Configuração para execução em modo de desenvolvimento
+    ports:
+      - "9200:9200" # Mapeia a porta 9200 para comunicação com o Elasticsearch
+    volumes:
+      - esdata:/usr/share/elasticsearch/data # Armazena os dados do Elasticsearch em um volume Docker
+
+volumes:
+  esdata:

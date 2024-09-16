@@ -1,0 +1,17 @@
+streamlit
+langchain
+langchain_core
+langchain_openai
+langchain_elasticsearch
+langgraph
+python-dotenv
+langchain_text_splitters
+openai
+transformers
+openai
+langchain_community
+pypdf2
+pdfminer.six
+faiss-cpu
+python-dotenv
+pydantic

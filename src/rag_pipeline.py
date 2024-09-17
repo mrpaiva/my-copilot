@@ -1,4 +1,4 @@
-from config.config import OPENAI_API_KEY
+from config.config import OPENAI_API_KEY,ELASTIC_SEARCH_URL,ELASTIC_SEARCH_USER,ELASTIC_SEARCH_PASSWORD,ELASTIC_SEARCH_HOST
 from langchain_community.vectorstores import FAISS
 from langchain_elasticsearch import ElasticsearchStore
 from langchain_openai import OpenAIEmbeddings
@@ -12,11 +12,17 @@ from langchain import hub
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 retrieval_qa_chat_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
 
-# Carregar o documento PDF
-loader = PyPDFLoader("data/pdfs/documento1.pdf")
-docs = loader.load()
+
+es_host=ELASTIC_SEARCH_HOST
+
+if ELASTIC_SEARCH_URL:
+    es_host=ELASTIC_SEARCH_URL
 
 def answer_question(user_query, chat_history):
+    # Carregar o documento PDF
+    loader = PyPDFLoader("data/pdfs/documento1.pdf")
+    docs = loader.load()
+    
     # Criar embeddings e o FAISS vectorstore
     embeddings = OpenAIEmbeddings()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
@@ -58,11 +64,11 @@ def answer_question_elastic(user_query, chat_history):
     
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
     vector_store = ElasticsearchStore(
-        es_url="http://localhost:9200",
+        es_url=es_host,
         index_name="langchain_index",
         embedding=embeddings,
-        es_user="elastic",
-        es_password="magrela01!",
+        es_user=ELASTIC_SEARCH_USER,
+        es_password=ELASTIC_SEARCH_PASSWORD,
     )
 
     retriever = vector_store.as_retriever(

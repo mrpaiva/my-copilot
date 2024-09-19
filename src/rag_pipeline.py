@@ -22,7 +22,6 @@ def answer_question(user_query, chat_history):
     # Carregar o documento PDF
     loader = PyPDFLoader("data/pdfs/documento1.pdf")
     docs = loader.load()
-    
     # Criar embeddings e o FAISS vectorstore
     embeddings = OpenAIEmbeddings()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)

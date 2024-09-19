@@ -9,13 +9,13 @@ from src.rag_pipeline import answer_question, answer_question_elastic
 load_dotenv()
 
 # app config
-st.set_page_config(page_title="Meu copilo", page_icon="🤖")
-st.title("Copiloto")
+st.set_page_config(page_title="Meu copilo", page_icon="https://universidade.multiclubes.com.br/o/14796/favicon/organizations%2F14796%2Ffavicon%2F1692636935694-70ivmg4s0ss-acd42bef2e03f5c71704ef5107d1e963%2FMultiClubes.png")
+st.title("MultiClubes Copilot")
 
 # session state
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-        AIMessage(content="Oi, eu sou seu assistente. Como posso te ajudar?"),
+        AIMessage(content="Oi, eu sou seu assistente. Estou sendo treinado para responder suas principais dúvidas sobre os produtos MultiCLubes. Como posso te ajudar?"),
     ]
 
     

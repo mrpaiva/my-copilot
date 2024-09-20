@@ -9,13 +9,25 @@ from src.rag_pipeline import answer_question, answer_question_elastic
 load_dotenv()
 
 # app config
-st.set_page_config(page_title="Meu copilo", page_icon="https://universidade.multiclubes.com.br/o/14796/favicon/organizations%2F14796%2Ffavicon%2F1692636935694-70ivmg4s0ss-acd42bef2e03f5c71704ef5107d1e963%2FMultiClubes.png")
+st.set_page_config(page_title="MultiClubes Copilot", page_icon="https://universidade.multiclubes.com.br/o/14796/favicon/organizations%2F14796%2Ffavicon%2F1692636935694-70ivmg4s0ss-acd42bef2e03f5c71704ef5107d1e963%2FMultiClubes.png")
 st.title("MultiClubes Copilot")
 
 # session state
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-        AIMessage(content="Olá, eu sou seu copiloto! Ainda sou um protótipo, por favor tenha paciência comigo 😊 Estou aqui para te ajudar com suas dúvidas sobre os produtos MultiClubes. O que posso fazer por você hoje?"),
+        AIMessage(content="""
+            Olá, eu sou seu Copiloto! Estou aqui para te ajudar com suas dúvidas sobre os produtos MultiClubes.
+            
+            **Antes de começarmos, aqui estão algumas coisas importantes para lembrar:**
+
+            📌 **Eu ainda estou em treinamento!** Posso ocasionalmente gerar respostas incorretas ou confusas, mas estou sempre aprendendo para melhorar. Por favor seja gentil comigo 😊 
+
+            🔄 Atualizações constantes: Estou em constante evolução. Novas funcionalidades podem ser adicionadas ao longo do tempo para te oferecer uma experiência ainda melhor.
+            
+            ---
+
+            **Pronto para começar?** 🚀        
+        """),
     ]
 
     

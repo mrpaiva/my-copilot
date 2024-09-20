@@ -18,7 +18,7 @@ if "chat_history" not in st.session_state:
         AIMessage(content="""
             Olá, eu sou seu Copiloto! Estou aqui para te ajudar com suas dúvidas sobre os produtos MultiClubes.
             
-            **Antes de começarmos, aqui estão algumas coisas importantes para lembrar:**
+            **Antes de começarmos, aqui estão alguns pontos importantes:**
 
             📌 **Eu ainda estou em treinamento!** Posso ocasionalmente gerar respostas incorretas ou confusas, mas estou sempre aprendendo para melhorar. Por favor seja gentil comigo 😊 
 

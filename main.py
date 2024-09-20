@@ -15,7 +15,7 @@ st.title("MultiClubes Copilot")
 # session state
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-        AIMessage(content="Olá, eu sou seu copiloto! Ainda sou um protótipo, então tenha paciência comigo 😊 Estou aqui para te ajudar com suas dúvidas sobre os produtos MultiClubes. O que posso fazer por você hoje?"),
+        AIMessage(content="Olá, eu sou seu copiloto! Ainda sou um protótipo, por favor tenha paciência comigo 😊 Estou aqui para te ajudar com suas dúvidas sobre os produtos MultiClubes. O que posso fazer por você hoje?"),
     ]
 
     

@@ -45,6 +45,9 @@ pip install -r requirements.txt
 
 4. Configure o arquivo `.env`:
 ```env
+OPENAI_API_KEY=sua_openai_api_key
+LANGCHAIN_TRACING_V2="true"
+LANGCHAIN_API_KEY=sua_langchain_apikey
 ELASTICSEARCH_URL=sua_url_elasticsearch
 ELASTICSEARCH_USERNAME=seu_usuario
 ELASTICSEARCH_PASSWORD=sua_senha

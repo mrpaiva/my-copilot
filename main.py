@@ -3,20 +3,17 @@ from langchain_core.messages import AIMessage, HumanMessage
 from dotenv import load_dotenv
 from src.rag_pipeline import answer_question, answer_question_elastic
 
-#comando para iniciar o Streamlit streamlit run main.py
-
-
 load_dotenv()
 
 # app config
-st.set_page_config(page_title="MultiClubes Copilot", page_icon="https://universidade.multiclubes.com.br/o/14796/favicon/organizations%2F14796%2Ffavicon%2F1692636935694-70ivmg4s0ss-acd42bef2e03f5c71704ef5107d1e963%2FMultiClubes.png")
-st.title("MultiClubes Copilot")
+st.set_page_config(page_title="My Copilot", page_icon="🤖")
+st.title("My Copilot")
 
 # session state
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
         AIMessage(content="""
-            Olá, eu sou seu Copiloto! Estou aqui para te ajudar com suas dúvidas sobre os produtos MultiClubes.
+            Olá, eu sou seu Copiloto! Estou aqui para te ajudar com suas dúvidas.
             
             **Antes de começarmos, aqui estão alguns pontos importantes:**
 

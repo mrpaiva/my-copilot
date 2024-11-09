@@ -113,9 +113,9 @@ Se você também está estudando estas tecnologias:
 ## 📞 Contato
 
 Se quiser trocar ideias sobre o projeto ou sobre aprendizado em IA:
-- LinkedIn: [\Mauro Couto de Paiva\](https://www.linkedin.com/in/mauro-couto-de-paiva/)
+- LinkedIn: \[Mauro Couto de Paiva\](https://www.linkedin.com/in/mauro-couto-de-paiva/)
 - Email: mcouto.paiva@gmail.com
-- Medium: [\@mrpaiva\](https://medium.com/@mrpaiva)
+- Medium: \[@mrpaiva\](https://medium.com/@mrpaiva)
 
 ---
 
